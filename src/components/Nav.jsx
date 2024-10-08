@@ -1,20 +1,22 @@
 import React from "react";
-import logo from "../assets/raviKumarLogo.webp";
-import tripleP from "../assets/3p.png";  // Import the PNG file
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+// Removed unused 'logo' import
+// import logo from "../assets/raviKumarLogo.webp";
+// Removed unused 'FaInstagram' import
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import letterP from "../assets/letter-p.png"; // Corrected import
 
 const Nav = () => {
   return (
     <nav className="flex items-center justify-between py-6">
-      <div className="flex flex-shrink-0 items-center">
+      <div className="flex flex-shrink-0 items-center h-20 w-20">
         <a href="/" aria-label="Home">
-          <img src={tripleP} className="mx-2" width={50} height={33} alt="logo" />
+          <img src={letterP} alt="Logo" className="" />
         </a>
       </div>
       <div className="m-8 flex items-center justify-center gap-6 text-4xl">
         <a
-          href="www.linkedin.com/in/prathamesh-palve-093066284"
+          href="https://www.linkedin.com/in/prathamesh-palve-093066284"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -33,7 +35,7 @@ const Nav = () => {
           rel="noopener noreferrer"
         >
           <SiLeetcode />
-          </a>
+        </a>
       </div>
     </nav>
   );
