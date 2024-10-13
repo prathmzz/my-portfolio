@@ -6,7 +6,7 @@ import { FaJava, FaPython } from "react-icons/fa";
 import { LiaNode } from "react-icons/lia";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaDocker } from "react-icons/fa";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const iconVariants = (duration) => ({
   initial: { y: -10 },

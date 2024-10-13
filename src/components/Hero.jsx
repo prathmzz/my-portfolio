@@ -1,5 +1,5 @@
 import React from "react";
-import profilePicture from "../assets/prathmzzIMG.png";
+// import profilePicture from "../assets/prathmzzIMG.png";
 // import profilePicture from "../assets/raviKumarProfile.webp";
 import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
