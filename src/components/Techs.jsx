@@ -8,7 +8,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaDocker } from "react-icons/fa";
 import { animate, motion } from "framer-motion";
 
-const iconVariants = (duration) => ({
+export const iconVariants = (duration) => ({
   initial: { y: -10 },
   animate: {
     y: [10, -10],
@@ -60,7 +60,7 @@ const Techs = () => {
           variants={iconVariants(3.0)}
           className="p-4"
         >
-          <SiMongodb className="text-8xl text-cyan-700" />
+          <SiMongodb className="text-8xl text-green-600" />
         </motion.div>
         <motion.div
           initial="initial"
@@ -68,7 +68,7 @@ const Techs = () => {
           variants={iconVariants(3.25)}
           className="p-4"
         >
-          <IoLogoJavascript className="text-8xl" />
+          <IoLogoJavascript className="text-8xl text-yellow-400" />
         </motion.div>
         <motion.div
           initial="initial"
@@ -76,7 +76,7 @@ const Techs = () => {
           variants={iconVariants(3.5)}
           className="p-4"
         >
-          <FaJava className="text-8xl" />
+          <FaJava className="text-8xl text-red-600" />
         </motion.div>
         <motion.div
           initial="initial"
@@ -84,7 +84,7 @@ const Techs = () => {
           variants={iconVariants(3.75)}
           className="p-4"
         >
-          <FaPython className="text-8xl" />
+          <FaPython className="text-8xl text-blue-500" />
         </motion.div>
         <motion.div
           initial="initial"
@@ -92,7 +92,7 @@ const Techs = () => {
           variants={iconVariants(4.0)}
           className="p-4"
         >
-          <FaDocker className="text-8xl" />
+          <FaDocker className="text-8xl text-blue-400" />
         </motion.div>
       </motion.div>
     </div>

@@ -3,6 +3,8 @@ import profilePicture from "../assets/prathmzzIMG.png";
 // import profilePicture from "../assets/raviKumarProfile.webp";
 import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
+import TrackVisibility from "react-on-screen";
+import headerImg from "../assets/header-img.svg";
 
 const containerVariants = {
   hidden: { opacity: 0, x: -100 },
@@ -16,6 +18,19 @@ const containerVariants = {
   },
 };
 
+export const iconVariants = (duration) => ({
+  initial: { y: -10 },
+  animate: {
+    y: [15, -15],
+    transition: {
+      duration: duration,
+      ease: "linear",
+      repeat: Infinity,
+      repeatType: "reverse",
+    },
+  },
+});
+
 const childVariants = {
   hidden: { opacity: 0, x: -100 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
@@ -26,18 +41,18 @@ const Hero = () => {
     <div className="pb-4 lg:mb-36">
       <div className="flex flex-wrap lg:flex-row-reverse">
         <div className="w-full lg:w-1/2">
-          <div className="flex justify-center lg:p-8">
-            <motion.img
-              src={profilePicture}
-              alt=""
-              width={650}
-              height={650}
-              className="border border-stone-900 rounded-3xl"
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.5 }}
-            />
-          </div>
+          <motion.div 
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(2.5)}
+          className="p-4 flex justify-center lg:p-8">
+          <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                  <img src={headerImg} alt="Header Img"/>
+                </div>}
+            </TrackVisibility>
+          </motion.div>
         </div>
         <div className="w-full lg:w-1/2">
           <motion.div
